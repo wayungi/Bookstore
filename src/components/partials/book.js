@@ -1,4 +1,4 @@
-/** @format */
+/* disable-eslint */
 
 const Book = (props) => {
   const { title, author } = props;
