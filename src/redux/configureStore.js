@@ -9,7 +9,7 @@ const rootReducer = combineReducers({
   category: categoryReducer,
 });
 
-const store = configureStore(rootReducer);
+const store = configureStore({ reducer: rootReducer });
 
 export default rootReducer;
 export { store };
