@@ -3,20 +3,13 @@
 const ADD_BOOK = 'add book';
 const REMOVE_BOOK = 'remove book';
 
-const addBookReducer = (state = [], action) => {
+const reducer = (state = [], action) => {
   switch (action.type) {
     case ADD_BOOK:
-      state.push(action.book);
+      state.push(action.payload);
       break;
-    default:
-      state;
-  }
-};
-
-const removeBookReducer = (state = [], action) => {
-  switch (action.type) {
     case REMOVE_BOOK:
-      state.pop();
+      state.remove();
       break;
     default:
       state;
@@ -25,17 +18,17 @@ const removeBookReducer = (state = [], action) => {
 
 /*
 action has type, and data
-
 */
 const actionAddBook = (bookObj) => {
   const { id, title, completed } = bookObj;
-  const action = { type: ADD_BOOK, data: { id, title, completed } };
+  const action = { type: ADD_BOOK, payload: { id, title, completed } };
   return action;
 };
 
 const actionRemoveBook = (id) => {
-  const action = { type: REMOVE_BOOK, data: id };
+  const action = { type: REMOVE_BOOK, payload: id };
   return action;
 };
 
-export { actionAddBook, actionRemoveBook, removeBookReducer, addBookReducer };
+export default reducer;
+export { actionAddBook, actionRemoveBook, ADD_BOOK, REMOVE_BOOK };
