@@ -17,6 +17,4 @@ const actCheckStatus = () => {
 };
 
 export default reducer;
-module.exports = {
-  actCheckStatus,
-};
+export { actCheckStatus };
