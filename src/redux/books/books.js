@@ -13,3 +13,12 @@ const addBookReducer = (state = [], action) => {
   }
 };
 
+const removeBookReducer = (state = [], action) => {
+  switch (action.type) {
+    case REMOVE_BOOK:
+      state.pop();
+      break;
+    default:
+      state;
+  }
+};
