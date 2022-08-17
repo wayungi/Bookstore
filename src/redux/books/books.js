@@ -23,8 +23,8 @@ const actionAddBook = (bookObj) => {
   return action;
 };
 
-const actionRemoveBook = (id) => {
-  const action = { type: REMOVE_BOOK, payload: id };
+const actionRemoveBook = (index) => {
+  const action = { type: REMOVE_BOOK, payload: index };
   return action;
 };
 
