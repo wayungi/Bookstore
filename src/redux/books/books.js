@@ -8,7 +8,10 @@ const booksReducer = (state = [], action) => {
     case ADD_BOOK:
       return [...state, action.payload];
     case REMOVE_BOOK:
-      return state.remove();
+      return [
+        ...state.slice(0, action.payload),
+        ...state.slice(action.payload + 1),
+      ];
     default:
       return state;
   }
