@@ -6,7 +6,7 @@ const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const booksReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_BOOK:
-      return state.push(action.payload);
+      return [...state, action.payload];
     case REMOVE_BOOK:
       return state.remove();
     default:
