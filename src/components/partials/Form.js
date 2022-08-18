@@ -17,7 +17,6 @@ const Form = () => {
   const handleAuthorInput = (e) => {
     setAuthor(e.target.value);
   };
-  // setTitle();
 
   return (
     <form>
@@ -50,7 +49,14 @@ const Form = () => {
         <button
           type="button"
           onClick={() => {
-            dispatch(actionAddBook({ id: uuidv4, title, completed: false }));
+            dispatch(
+              actionAddBook({
+                id: uuidv4,
+                title,
+                author,
+                completed: false,
+              }),
+            );
           }}
         >
           Add Book

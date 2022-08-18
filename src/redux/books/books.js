@@ -44,8 +44,21 @@ const booksReducer = (
 action has type, and data
 */
 const actionAddBook = (bookObj) => {
-  const { id, title, completed } = bookObj;
-  const action = { type: ADD_BOOK, payload: { id, title, completed } };
+  const {
+    id,
+    title,
+    author,
+    completed,
+  } = bookObj;
+  const action = {
+    type: ADD_BOOK,
+    payload: {
+      id,
+      title,
+      author,
+      completed,
+    },
+  };
   return action;
 };
 
