@@ -3,14 +3,7 @@
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
-const booksReducer = (
-  state = [
-    { id: 1, title: 'Cross roads', completed: false },
-    { id: 2, title: 'Archery', completed: true },
-    { id: 2, title: 'The river between', completed: false },
-  ],
-  action,
-) => {
+const booksReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.payload];

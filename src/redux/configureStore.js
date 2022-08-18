@@ -9,7 +9,14 @@ const rootReducer = combineReducers({
   category: categoryReducer,
 });
 
-const store = configureStore({ reducer: rootReducer });
+const store = configureStore({
+  reducer: rootReducer,
+  state: [
+    { id: 1, title: 'Cross roads', completed: false },
+    { id: 2, title: 'Archery', completed: true },
+    { id: 2, title: 'The river between', completed: false },
+  ],
+});
 
 export default rootReducer;
 export { store };
