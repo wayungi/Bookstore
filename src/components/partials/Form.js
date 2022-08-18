@@ -51,7 +51,7 @@ const Form = () => {
           onClick={() => {
             dispatch(
               actionAddBook({
-                id: uuidv4,
+                id: uuidv4(),
                 title,
                 author,
                 completed: false,

@@ -8,11 +8,12 @@ import { actionRemoveBook } from '../../redux/books/books';
 const Book = (props) => {
   const { book } = props;
   const dispatch = useDispatch();
+  console.log(book);
   return (
     <li>
       <p>{book.title}</p>
       <p>{book.author}</p>
-      <button type='button' onClick={() => {dispatch(actionRemoveBook(book))}}>Remove</button>
+      <button type='button' onClick={() => {dispatch(actionRemoveBook(book.id))}}>Remove</button>
     </li>
   );
 };

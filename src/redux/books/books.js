@@ -33,7 +33,7 @@ const booksReducer = (
       return [
         // ...state.slice(0, action.payload),
         // ...state.slice(action.payload + 1),
-        ...state.filter((book) => book.id !== action.payload.id),
+        ...state.filter((book) => book.id !== action.payload),
       ];
     default:
       return state;
