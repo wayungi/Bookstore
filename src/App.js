@@ -1,7 +1,7 @@
 /** @format */
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Books from './components/pages/books';
-import Categories from './components/pages/categories';
+import Books from './components/pages/BookList';
+import Categories from './components/pages/Categories';
 
 function App() {
   return (
