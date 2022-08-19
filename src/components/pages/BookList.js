@@ -1,24 +1,24 @@
 /** @format */
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { actionGetBooks } from '../../redux/books/books';
 import Form from '../partials/Form';
 import Book from '../partials/Book';
 
 const BookList = () => {
   const books = useSelector((state) => state.books);
-  // runs on page load
+  console.log(books);
+  const dispatch = useDispatch();
   useEffect(() => {
-    fetch(
-      'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aIlaxApD4aX5fUDfNGCE/books',
-    )
-      .then((response) => response.json())
-      .then((data) => console.log(data));
+    dispatch(actionGetBooks());
   }, []);
 
   return (
     <div>
       {books.map((book) => (
-        <Book key={book.id} book={book} />
+        <li key={book.item_id}>
+          <Book book={book} />
+        </li>
       ))}
       <Form />
     </div>

@@ -10,11 +10,11 @@ const Book = (props) => {
   const dispatch = useDispatch();
   // console.log(book);
   return (
-    <li>
+    <div>
       <p>{book.title}</p>
       <p>{book.author}</p>
       <button type='button' onClick={() => {dispatch(actionRemoveBook(book.id))}}>Remove</button>
-    </li>
+    </div>
   );
 };
 
