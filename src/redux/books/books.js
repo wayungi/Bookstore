@@ -47,7 +47,7 @@ const booksReducer = (
 action has type, and data
 */
 const actionAddBook = (book) => async (dispatch) => {
-  const response = await fetch(
+  await fetch(
     'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aIlaxApD4aX5fUDfNGCE/books',
     {
       method: 'POST',
@@ -62,7 +62,6 @@ const actionAddBook = (book) => async (dispatch) => {
       }),
     },
   ).then(dispatch({ type: ADD_BOOK, payload: book }));
-  console.log(`Response: ${response}`);
 };
 
 const actionRemoveBook = (id) => {
