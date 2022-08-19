@@ -2,9 +2,9 @@
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
-const FETCH_BOOKS = 'bookStore/books/FECTH_BOOKS';
-const BOOK_FETCH_SUCCESS = 'bookStore/books/BOOK_FETCH_SUCCESS';
-const BOOK_FETCH_FAILURE = 'bookStore/books/BOOK_FETCH_FAILURE';
+// const FETCH_BOOKS = 'bookStore/books/FECTH_BOOKS';
+// const BOOK_FETCH_SUCCESS = 'bookStore/books/BOOK_FETCH_SUCCESS';
+// const BOOK_FETCH_FAILURE = 'bookStore/books/BOOK_FETCH_FAILURE';
 
 const booksReducer = (
   state = [
@@ -27,7 +27,7 @@ const booksReducer = (
       completed: false,
     },
   ],
-  action
+  action,
 ) => {
   switch (action.type) {
     case ADD_BOOK:
@@ -46,18 +46,23 @@ const booksReducer = (
 /*
 action has type, and data
 */
-const actionAddBook = (bookObj) => {
-  const { id, title, author, completed } = bookObj;
-  const action = {
-    type: ADD_BOOK,
-    payload: {
-      id,
-      title,
-      author,
-      completed,
+const actionAddBook = (book) => async (dispatch) => {
+  const response = await fetch(
+    'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aIlaxApD4aX5fUDfNGCE/books',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        item_id: book.id,
+        title: book.title,
+        author: book.author,
+        category: book.category,
+      }),
     },
-  };
-  return action;
+  ).then(dispatch({ type: ADD_BOOK, payload: book }));
+  console.log(`Response: ${response}`);
 };
 
 const actionRemoveBook = (id) => {
@@ -65,15 +70,14 @@ const actionRemoveBook = (id) => {
   return action;
 };
 
-const actionFetchBooks = () => (dispatch) => {
-  dispatch({ type: FETCH_BOOKS });
-  return fetch(
-    'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aIlaxApD4aX5fUDfNGCE/books',
-  ).then(
-    (books) => dispatch({ type: BOOK_FETCH_SUCCESS, payload: books }),
-    (err) => dispatch({ type: BOOK_FETCH_FAILURE, payload: err }),
-  );
-};
+// const actionFetchBooks = () => (dispatch) => {
+//   return fetch(
+//     ',
+//     {
+//     },
+//   ).then(
+//     dispatch({ type: ADD_BOOK, payload:book }),
+// };
 
 export default booksReducer;
-export { actionAddBook, actionRemoveBook, actionFetchBooks };
+export { actionAddBook, actionRemoveBook };
