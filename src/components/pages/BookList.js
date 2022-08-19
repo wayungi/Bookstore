@@ -9,7 +9,7 @@ const BookList = () => {
   // runs on page load
   useEffect(() => {
     fetch(
-      'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/1EGh4k8reaqTuMnlef5i/books',
+      'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aIlaxApD4aX5fUDfNGCE/books',
     )
       .then((response) => response.json())
       .then((data) => console.log(data));

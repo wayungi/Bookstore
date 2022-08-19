@@ -8,7 +8,7 @@ import { actionRemoveBook } from '../../redux/books/books';
 const Book = (props) => {
   const { book } = props;
   const dispatch = useDispatch();
-  console.log(book);
+  // console.log(book);
   return (
     <li>
       <p>{book.title}</p>
