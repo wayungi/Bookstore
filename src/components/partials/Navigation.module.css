@@ -1,3 +1,17 @@
 .navbar {
     outline:1px solid black;
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.navbarLeft {
+    outline: 1px solid green;
+    display: flex;
+}
+
+.navbarRight {
+    outline: 1px solid pink;
 }
