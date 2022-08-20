@@ -13,7 +13,7 @@ const Book = (props) => {
     <div>
       <p>{book.title}</p>
       <p>{book.author}</p>
-      <button type='button' onClick={() => {dispatch(actionRemoveBook(book.id))}}>Remove</button>
+      <button type='button' onClick={() => {dispatch(actionRemoveBook(book.item_id))}}>Remove</button>
     </div>
   );
 };
