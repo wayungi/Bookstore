@@ -29,7 +29,9 @@ const Book = (props) => {
           </div>
         </div>
         <div className={styles.right}>
-          right lane
+          <h2>Current Chapter</h2>
+          <p>Chapter 17</p>
+          <Link to="/#" className={styles.update}>UPDATE PROGRESS</Link>
         </div>
     </div>
   );

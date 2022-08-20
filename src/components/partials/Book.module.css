@@ -6,12 +6,10 @@ p, h1, h2 {
 .book {
     display: flex;
     flex-direction: row;
-    /* outline: 1px solid red; */
 }
 
 .left {
-    /* outline: 1px solid green; */
-    width:50%;
+    width:40%;
     display:flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -63,16 +61,48 @@ p, h1, h2 {
 
 /* middle section of book */
 .middle{
-    /* outline:1px solid yellow; */
     width:30%
 }
 
 .progress {
     padding-top:2px;
-    /* outline:1px solid black; */
 }
 
 .right {
-    outline:1px solid pink;
-    width: 20%;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    box-sizing: border-box;
+    padding-left:30px;
+    padding-top: 20px;
+}
+
+.right p, .right h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.right h2 {
+    font-size: 12px;
+    color: rgb(150,150,150);
+    text-transform: uppercase;
+    margin-bottom:10px;
+
+}
+
+.right p {
+    font-size: 12;
+    color: black;
+    margin-bottom:10px;
+}
+
+.update {
+    all:unset;
+    outline:1px solid blue;
+    padding:5px 20px;
+    border-radius: 2px;
+    color:white;
+    background: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    width:60%;
 }
