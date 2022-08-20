@@ -8,7 +8,7 @@ const Navigation = () => (
       <div>
         <h1>Bookstore CMS</h1>
       </div>
-      <ul>
+      <ul className={styles.listItem}>
         <li>
           <Link to="/">BOOKS</Link>
         </li>

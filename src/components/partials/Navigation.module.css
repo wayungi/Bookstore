@@ -4,12 +4,25 @@
     padding:0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
 .navbarLeft {
     outline: 1px solid green;
     display: flex;
+    margin: 0 10%;
+}
+
+.navbarLeft h1 {
+    color:blue;
+}
+
+.listItem {
+    outline: 1px solid yellow;
+    display: flex;
+    align-items: center;
 }
 
 .navbarRight {
