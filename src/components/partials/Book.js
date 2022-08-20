@@ -24,7 +24,9 @@ const Book = (props) => {
           </div>
         </div>
         <div className={styles.middle}>
-          middle section
+          <div className={styles.oval}>
+            <img src={require('../../images/slice.png')} alt="progress circle" className={styles.progress}/>
+          </div>
         </div>
         <div className={styles.right}>
           right lane

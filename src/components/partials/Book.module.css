@@ -61,10 +61,15 @@ p, h1, h2 {
     padding-left:15px; 
 }
 
-
+/* middle section of book */
 .middle{
-    outline:1px solid yellow;
+    /* outline:1px solid yellow; */
     width:30%
+}
+
+.progress {
+    padding-top:2px;
+    /* outline:1px solid black; */
 }
 
 .right {
