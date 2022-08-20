@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 /** @format */
 import { Link } from 'react-router-dom';
 import styles from './Navigation.module.css';
@@ -10,15 +11,21 @@ const Navigation = () => (
       </div>
       <ul className={styles.listItem}>
         <li>
-          <Link to="/">BOOKS</Link>
+          <Link to="/" className={styles.linkDefault}>
+            BOOKS
+          </Link>
         </li>
         <li>
-          <Link to="/category">CATEGORIES</Link>
+          <Link to="/category" className={styles.linkDefault}>
+            CATEGORIES
+          </Link>
         </li>
       </ul>
     </div>
 
-    <div className={styles.navbarRight}>Logo</div>
+    <div className={styles.navbarRight}>
+      <img src={require('../../images/user.png')} alt="user logo" className={styles.profile} />
+    </div>
   </div>
 );
 

@@ -1,5 +1,5 @@
 .navbar {
-    outline:1px solid black;
+    border-bottom: 2px solid #e8e8e8;
     margin:0;
     padding:0;
     display: flex;
@@ -10,7 +10,7 @@
 }
 
 .navbarLeft {
-    outline: 1px solid green;
+    /* outline: 1px solid green; */
     display: flex;
     margin: 0 10%;
 }
@@ -20,11 +20,29 @@
 }
 
 .listItem {
-    outline: 1px solid yellow;
+    /* outline: 1px solid yellow; */
     display: flex;
     align-items: center;
+    box-sizing: border-box;
+}
+
+.listItem  li {
+    list-style: none;
+    /* outline: 1px solid blue; */
+    margin: 0  2%;
+}
+
+.linkDefault {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(155, 155, 155)
 }
 
 .navbarRight {
-    outline: 1px solid pink;
+    /* outline: 1px solid pink; */
+    margin: 0 5%;
+}
+
+.profile {
+    width:50%;
 }
