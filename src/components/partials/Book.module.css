@@ -37,8 +37,28 @@ p, h1, h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.author {
+.author, .comment, .edit {
     color: rgba(0, 0, 150, 0.6)
+}
+
+.remove {
+    all:unset;
+    color: rgba(0, 0, 150, 0.6);
+    border-left: 1px solid rgba(150,150,150);
+    border-right: 1px solid rgba(150,150,150);
+    padding:2px 15px;
+}
+
+.remove, .comment, .edit {
+    text-decoration: none;
+}
+
+.comment {
+    padding-right:15px;
+}
+
+.edit {
+    padding-left:15px; 
 }
 
 
