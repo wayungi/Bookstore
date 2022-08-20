@@ -1,17 +1,26 @@
 /** @format */
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { actionGetBooks } from '../../redux/books/books';
 import Form from '../partials/Form';
 import Book from '../partials/Book';
 
 const BookList = () => {
   const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(actionGetBooks());
+  }, []);
+
   return (
-    <div>
+    <ul>
       {books.map((book) => (
-        <Book key={book.id} book={book} />
+        <li key={book.item_id}>
+          <Book book={book} />
+        </li>
       ))}
       <Form />
-    </div>
+    </ul>
   );
 };
 

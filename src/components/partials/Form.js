@@ -8,6 +8,7 @@ import { actionAddBook } from '../../redux/books/books';
 const Form = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
 
   const handleTitleInput = (e) => {
@@ -16,6 +17,10 @@ const Form = () => {
 
   const handleAuthorInput = (e) => {
     setAuthor(e.target.value);
+  };
+
+  const handleCategoryInput = (e) => {
+    setCategory(e.target.value);
   };
 
   return (
@@ -46,6 +51,17 @@ const Form = () => {
         />
       </div>
       <div>
+        <input
+          type="text"
+          required
+          id="category"
+          placeholder="Category"
+          value={category}
+          name="category"
+          onChange={handleCategoryInput}
+        />
+      </div>
+      <div>
         <button
           type="button"
           onClick={() => {
@@ -55,6 +71,7 @@ const Form = () => {
                 title,
                 author,
                 completed: false,
+                category,
               }),
             );
           }}
