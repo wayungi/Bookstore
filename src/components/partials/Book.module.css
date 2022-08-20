@@ -1,0 +1,34 @@
+.book {
+    display: flex;
+    flex-direction: row;
+    /* outline: 1px solid red; */
+}
+
+.left {
+    /* outline: 1px solid green; */
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding:20px 40px;
+}
+
+.left p {
+    outline:1px solid black;
+}
+
+.left h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(150,150,150);
+    font-size:15px;
+}
+
+.middle{
+    outline:1px solid yellow;
+    width:30%
+}
+
+.right {
+    outline:1px solid pink;
+    width: 20%;
+}

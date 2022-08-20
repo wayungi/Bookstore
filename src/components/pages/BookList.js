@@ -15,9 +15,9 @@ const BookList = () => {
 
   return (
     <div className={styles.bookListWrapper}>
-      <ul>
+      <ul className={styles.bookList}>
         {books.map((book) => (
-          <li key={book.item_id}>
+          <li key={book.item_id} className={styles.bookItem}>
             <Book book={book} />
           </li>
         ))}
