@@ -1,0 +1,114 @@
+p,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px 40px;
+}
+
+.left h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(150, 150, 150);
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.left p {
+  margin-bottom: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.author,
+.comment,
+.edit {
+  color: rgba(0, 0, 150, 0.6);
+}
+
+.remove {
+  all: unset;
+  color: rgba(0, 0, 150, 0.6);
+  border-left: 1px solid rgba(150, 150, 150);
+  border-right: 1px solid rgba(150, 150, 150);
+  padding: 2px 15px;
+}
+
+.remove,
+.comment,
+.edit {
+  text-decoration: none;
+}
+
+.comment {
+  padding-right: 15px;
+}
+
+.edit {
+  padding-left: 15px;
+}
+
+/* middle section of book */
+.middle {
+  width: 30%;
+}
+
+.progress {
+  padding-top: 2px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.right p,
+.right h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.right h2 {
+  font-size: 12px;
+  color: rgb(150, 150, 150);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.right p {
+  font-size: 12px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.update {
+  all: unset;
+  outline: 1px solid blue;
+  padding: 5px 20px;
+  border-radius: 2px;
+  color: white;
+  background: blue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  width: 60%;
+}

@@ -1,0 +1,43 @@
+.navbar {
+  border-bottom: 2px solid #e8e8e8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbarLeft {
+  display: flex;
+  margin: 0 10%;
+}
+
+.navbarLeft h1 {
+  color: blue;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.listItem li {
+  list-style: none;
+  margin: 0  2%;
+}
+
+.linkDefault {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(155, 155, 155);
+}
+
+.navbarRight {
+  margin: 0 5%;
+}
+
+.profile {
+  width: 50%;
+}

@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { actionGetBooks } from '../../redux/books/books';
 import Form from '../partials/Form';
 import Book from '../partials/Book';
+import styles from './BookList.module.css';
 
 const BookList = () => {
   const books = useSelector((state) => state.books);
@@ -13,14 +14,16 @@ const BookList = () => {
   }, []);
 
   return (
-    <ul>
-      {books.map((book) => (
-        <li key={book.item_id}>
-          <Book book={book} />
-        </li>
-      ))}
-      <Form />
-    </ul>
+    <div className={styles.bookListWrapper}>
+      <ul className={styles.bookList}>
+        {books.map((book) => (
+          <li key={book.item_id} className={styles.bookItem}>
+            <Book book={book} />
+          </li>
+        ))}
+        <Form />
+      </ul>
+    </div>
   );
 };
 

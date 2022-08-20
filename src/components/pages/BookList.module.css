@@ -1,0 +1,10 @@
+.bookListWrapper {
+  margin: 0;
+}
+
+.bookItem {
+  list-style: none;
+  border: 1px solid #e8e8e8;
+  margin: 30px 50px;
+  border-radius: 5px;
+}
