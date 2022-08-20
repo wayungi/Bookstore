@@ -1,3 +1,8 @@
+p, h1, h2 {
+    margin:0;
+    padding:0;
+}
+
 .book {
     display: flex;
     flex-direction: row;
@@ -13,15 +18,29 @@
     padding:20px 40px;
 }
 
-.left p {
-    outline:1px solid black;
-}
-
 .left h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(150,150,150);
     font-size:15px;
+    margin-bottom:10px;;
 }
+
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.left p {
+    margin-bottom:10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.author {
+    color: rgba(0, 0, 150, 0.6)
+}
+
 
 .middle{
     outline:1px solid yellow;
