@@ -7,21 +7,20 @@ import Book from '../partials/Book';
 
 const BookList = () => {
   const books = useSelector((state) => state.books);
-  console.log(books);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(actionGetBooks());
   }, []);
 
   return (
-    <div>
+    <ul>
       {books.map((book) => (
         <li key={book.item_id}>
           <Book book={book} />
         </li>
       ))}
       <Form />
-    </div>
+    </ul>
   );
 };
 
